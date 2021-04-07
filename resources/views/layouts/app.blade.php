@@ -76,7 +76,7 @@
                                     Perfil</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -103,7 +103,7 @@
             @endif
             <div class=" container">
                 <div class="row ">
-                    @if (Request::is('login') || Request::is('Register'))
+                    @if (Request::is('login') || Request::is('register'))
 
                     @else
                         @include('partials.sidebar')

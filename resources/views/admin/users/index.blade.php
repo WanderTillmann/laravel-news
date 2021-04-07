@@ -4,15 +4,16 @@
     <div class="col-9 " id="page-content-wrapper">
         <div class="card">
             <div class="card-header">
-                <div class="row d-flex align-items-center">
-                    <div class="col-10">
+                <div class="row ">
+                    <div class="col-8">
                         <h4 class="card-title m-0">{{ __('Users') }}</h4>
                     </div>
-                    <div class="col-2 d-flex justify-content-end text-right">
+                    <div class="col-4 d-flex justify-content-end text-right">
                         <button type="button" class="btn btn-link text-dark btn-sm" data-bs-toggle="modal"
                             data-bs-target="#searchModal">
                             <i class="bi bi-search"></i>
                         </button>
+                        <a class="btn btn-primary btn-sm" href="{{ url('/') }}">Voltar</a>
                     </div>
                 </div>
             </div>

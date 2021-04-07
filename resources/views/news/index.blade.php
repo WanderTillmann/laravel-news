@@ -8,14 +8,15 @@
                     <div class="col-8">
                         <h4 class="card-title m-0">{{ __('Noticias') }}</h4>
                     </div>
-                    <div class="col-2 d-flex justify-content-end text-right">
+                    <div class="col-4 d-flex justify-content-end text-right">
                         <button type="button" class="btn btn-link text-dark btn-sm" data-bs-toggle="modal"
                             data-bs-target="#searchModal">
                             <i class="bi bi-search"></i>
                         </button>
-                    </div>
-                    <div class=" col-2 text-right">
-                        <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary">Add Noticia</a>
+                        <div class=" text-right me-1">
+                            <a href="{{ route('post.create') }}" class="btn btn-sm btn-primary">Add Noticia</a>
+                        </div>
+                        <a class="btn btn-primary btn-sm" href="{{ url('/') }}">Voltar</a>
                     </div>
                 </div>
                 <div class="modal modal-search fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal"
@@ -36,23 +37,27 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body">
-                <table class="table  table-borderless list-unstyled">
+            <div class="card-body row">
+                <table class="table table-borderless list-unstyled col-12">
                     <thead class="text-center text-dark border-bottom ">
                         <tr class="align-middle">
                             <th scope="col">Nome</th>
-                            <th scope="col">Descriçäo</th>
+                            <th scope="col" class="col-5">Descriçäo</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody class="text-center">
+                    <tbody class=" col-12">
                         @forelse ($posts as $post)
                             @can('view', $post)
                                 <tr>
-                                    <td class="align-middle"><a
-                                            href="{{ route('post.show', $post->id) }}">{{ $post->title }}</a></td>
-                                    <td class="align-middle"><a
-                                            href="{{ route('post.show', $post->id) }}">{{ $post->content }}</a></td>
+                                    <td class=" align-middle"><a
+                                            href="{{ route('post.show', $post->id) }}">{{ $post->title }}</a>
+                                    </td>
+                                    <td>
+                                        <a href=" {{ route('post.show', $post->id) }}">
+                                            <p class="col-5 text-truncate">{{ $post->content }}</p>
+                                        </a>
+                                    </td>
                                     <td class="d-flex flex-row justify-content-end col ">
                                         <a href="{{ route('post.edit', $post->id) }}"
                                             class="btn btn-sm btn-primary me-2">Editar</a>

@@ -9,7 +9,7 @@
                         <h2 class="post-title">
                             {{ $post->title }}
                         </h2>
-                        <h3 class="post-subtitle">
+                        <h3 class="post-subtitle text-truncate">
                             {{ $post->content }}
                         </h3>
                     </a>

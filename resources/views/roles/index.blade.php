@@ -4,19 +4,18 @@
     <div class="col-8">
         <div class="card">
             <div class="card-header">
-                <div class="row d-flex align-items-center">
-                    <div class="col-9">
+                <div class="row">
+                    <div class="col-6">
                         <h4 class="card-title m-0">{{ __('Cargos') }}</h4>
                     </div>
-                    <div class="col-1 d-flex justify-content-end text-right">
+                    <div class="col-6 d-flex justify-content-end text-right">
                         <button type="button" class="float-right btn btn-link text-dark btn-sm" data-bs-toggle="modal"
                             data-bs-target="#searchModal">
                             <i class="bi bi-search"></i>
                         </button>
-                    </div>
-                    <div class=" col-2 d-flex text-right justify-content-end">
                         <a href="{{ route('role.create') }}"
-                            class="btn btn-sm btn-primary float-right">{{ __('Add Cargos') }}</a>
+                            class="btn btn-sm btn-primary float-right me-2">{{ __('Add Cargos') }}</a>
+                        <a class="btn btn-primary btn-sm" href="{{ url('/') }}">Voltar</a>
                     </div>
                 </div>
                 <div class="modal modal-search fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal"
@@ -52,7 +51,7 @@
                         @forelse ($roles as $role)
                             <tr>
                                 <td class="align-middle">{{ $role->name }}</td>
-                                <td class="align-middle">{{ $role->discription }}</td>
+                                <td class="align-middle">{{ $role->description }}</td>
                                 {{-- <td class="align-middle">
                                     @foreach ($rolePermissions as $rolePermission)
                                         <a href="">{{ $rolePermission['name'] }}</a>

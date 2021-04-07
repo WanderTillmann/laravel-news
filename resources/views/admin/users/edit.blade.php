@@ -3,7 +3,14 @@
 @section('content')
     <div class="col-md-6 m-0 mb-2">
         <div class="card">
-            <div class="card-header">Editar Usuario</div>
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-8">Editar Usuario</div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <a class="btn btn-primary btn-sm" href="{{ route('user.index') }}">Voltar</a>
+                    </div>
+                </div>
+            </div>
             <div class="card-body">
                 @include('admin.users._form')
             </div>

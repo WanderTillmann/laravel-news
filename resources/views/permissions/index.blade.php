@@ -8,15 +8,16 @@
                     <div class="col-8">
                         <h4 class="card-title m-0">{{ __('Permissões') }}</h4>
                     </div>
-                    <div class="col-1 d-flex justify-content-end text-right">
+
+                    <div class="col-4 d-flex justify-content-end text-right">
                         <button type="button" class="btn btn-link text-dark btn-sm" data-bs-toggle="modal"
                             data-bs-target="#searchModal">
                             <i class="bi bi-search"></i>
                         </button>
-                    </div>
-                    <div class=" col-3 d-flex text-right justify-content-end">
                         <a href="{{ route('permission.create') }}"
-                            class="btn btn-sm btn-primary ">{{ __('Add Permissão') }}</a>
+                            class="btn btn-sm btn-primary me-2">{{ __('Add Permissão') }}</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('/') }}">Voltar</a>
+
                     </div>
                 </div>
                 <div class="modal modal-search fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal"

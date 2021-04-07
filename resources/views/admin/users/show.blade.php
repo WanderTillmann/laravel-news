@@ -4,7 +4,12 @@
     <div class="col-md-8 float-right d-flex  justify-content-center">
         <div class="card">
             <div class=" card-header">
-                Usuário
+                <div class="row d-flex align-items-center">
+                    <div class="col-6">Usuário</div>
+                    <div class="col-6 d-flex justify-content-end text-right">
+                        <a class="btn btn-primary btn-sm " href="{{ route('user.index') }}">Voltar</a>
+                    </div>
+                </div>
             </div>
             <div class="card-body  align-items-center">
                 <div class="d-flex justify-content-center">
